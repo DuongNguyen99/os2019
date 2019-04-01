@@ -11,6 +11,6 @@ Student Info
 =======================
 
 * Name: Nguyen Dang Duong
-* ID: USTH-BI8-035
+* ID: USTHBI8-035
 
 
