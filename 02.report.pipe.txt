@@ -1,0 +1,17 @@
+duongnguyen99@ADMIN:~$ grep 'list' ./
+grep: ./: Is a directory
+
+duongnguyen99@ADMIN:~$ wc -l /etc/passwd
+41 /etc/passwd
+
+duongnguyen99@ADMIN:~$ free
+              total       
+Mem:        3792236   
+Swap:       8000508
+
+duongnguyen99@ADMIN:~$ grep -c processor /proc/cpuinfo
+8
+
+duongnguyen99@ADMIN:~$ find -type f -name *.jpg* | wc -l
+0
+
