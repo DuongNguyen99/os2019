@@ -1,0 +1,18 @@
+duongnguyen99@ADMIN:~$ ps aux | grep firefox
+duongng+ 11744 19.1  7.5 1932556 285636 tty2   Sl+  14:00   0:13 /usr/lib/firefox/firefox -new-window
+duongng+ 11898 16.1  8.1 1876388 309324 tty2   Sl+  14:00   0:10 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 1 -prefMapSize 174210 -parentBuildID 20190506100834 -greomni /usr/lib/firefox/omni.ja -appomni /usr/lib/firefox/browser/omni.ja -appdir /usr/lib/firefox/browser 11744 true tab
+duongng+ 11961  0.9  2.8 1540016 107464 tty2   Sl+  14:00   0:00 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 5408 -prefMapSize 174210 -parentBuildID 20190506100834 -greomni /usr/lib/firefox/omni.ja -appomni /usr/lib/firefox/browser/omni.ja -appdir /usr/lib/firefox/browser 11744 true tab
+
+duongng+ 12113  0.0  0.0  23076  1104 pts/0    S+   14:01   0:00 grep --color=auto firefox
+
+duongnguyen99@ADMIN:~$ ps -o nlwp 11744
+72
+
+duongnguyen99@ADMIN:~$ ps -o nlwp 11898
+36
+
+duongnguyen99@ADMIN:~$ ps -o nlwp 11961
+31
+
+duongnguyen99@ADMIN:~$ ps -o nlwp 12113
+24
