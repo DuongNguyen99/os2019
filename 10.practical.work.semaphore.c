@@ -6,8 +6,6 @@
 #include <semaphore.h>
 
 #define BUFFER_SIZE 10
-sem_t s;
-int pid=-1;
 
 typedef struct product{
     char type; 
@@ -86,7 +84,6 @@ int main(){
     pthread_create(&tid2, NULL, thread_consumer, NULL) 
     pthread_join(tid1, NULL);
     pthread_join(tid2, NULL);
-    pthread_exit(NULL);
     pthread_mutex_destroy(&m);
     sem_destroy(&s);
     return 0;
