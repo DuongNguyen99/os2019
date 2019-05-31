@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <pthread.h>
+
 #define BUFFER_SIZE 10
+
 typedef struct {
     char type; // 0=fried chicken, 1=French fries
     int amount; // pieces or weight
@@ -38,20 +40,20 @@ item *consume() {
     return i;
 }
 
-item *initbuffer(char t, int a, char u){
+item *initItem(char type, int amount, char unit){
     item *i = malloc(sizeof(item));
-    i->type=t;
-    i->amount=a;
-    i->unit=u;
+    i->type = type;
+    i->amount = amount;
+    i->unit = unit;
     return i;
 }
 
 void *thread_producer(void *param){
-    item *item1 = initbuffer(0,9,0);
+    item *item1 = initItem(1,3,0);
     produce(item1);
-    item *item2 = initbuffer(1,8,1);
+    item *item2 = initItem(0,9,1);
     produce(item2);
-    item *item3 = initbuffer(1,7,1);
+    item *item3 = initItem(1,5,1);
     produce(item3);
 }
 
@@ -66,7 +68,7 @@ int main(){
     pthread_t tid1, tid2;
     pthread_create(&tid1, NULL, thread_producer, NULL);
     pthread_create(&tid2, NULL, thread_consumer, NULL);
-    pthread_join(tid1,NULL);
-    pthread_join(tid2,NULL);
+    pthread_join(tid1, NULL);
+    pthread_join(tid2, NULL);
     return 0;
-}c
+}
